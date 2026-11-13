@@ -23,7 +23,7 @@ Studies suggest that most retail forex traders lose money in the long run, with 
 - **Deals file:** 662 rows, 13 columns (Time, Deal, Symbol, Type, Direction, Volume, Price, Order, Commission, Swap, Profit, Balance, Comment). Each trade is an entry deal ("in") and an exit deal ("out"), giving 331 trades.
 - **Orders file:** 662 rows, 14 columns, including requested volume, stop-loss and take-profit prices for the entry orders.
 - **Coverage:** EURUSD only, 26 January 2023 to 26 December 2023, starting balance 50,000, final balance 194,826.96.
-- **Licence/usage:** the Kaggle dataset is released under the MIT licence. The ECB rates are published for information purposes only and are used here for educational purposes.
+- **Licence/usage:** the Kaggle dataset is released under the MIT licence. ECB rates are used under the ECB's terms of use (free use with the ECB cited as the source, https://www.ecb.europa.eu/services/using-our-site/disclaimer/html/index.en.html). Any reshaping or derived values (for example conversion to long format or cross rates) were made by the author and are not ECB figures. Rates are published for information purposes only.
 - **Privacy:** both sources are public and contain no information that identifies real people.
 
 ## Innovation
@@ -37,12 +37,13 @@ CURRENCY_PAIRS, EXCHANGE_RATES, TRADERS, ACCOUNTS, STRATEGIES, TRADES, RISK_RULE
 - **Procedures:** open a trade, close a trade and calculate profit/loss, load and pair entry/exit deals into trades
 - **Cursors:** loop through trades to build a monthly performance report
 - **Triggers:** block a trade whose risk exceeds the per-trade limit (planned 2% of balance) or that pushes the daily loss past the daily limit (planned 3%), and write every blocked attempt to the audit log. Limits are stored in the RISK_RULES table so they can be changed.
-- **Package:** group all features in one package (FX_TRADING_PKG)
+- **Package:** group all features in one package (for example FX_TRADING_PKG)
 - **Exception handling:** clear error messages for invalid trades
 
 ## Limitations
 - The trade records are backtest results from one automated strategy and one symbol (EURUSD), not live trades of a human trader.
-- ECB rates are daily reference rates and are not tradable prices.
+- Lot sizes reach 54.79 on an account that started at 50,000, which implies very high leverage, so the data is not a typical retail setup.
+- ECB rates are daily reference rates (one per working day, none on weekends) and are not tradable prices.
 
 ## Repository Structure
 - `docs/research/` – research log
@@ -51,4 +52,8 @@ CURRENCY_PAIRS, EXCHANGE_RATES, TRADERS, ACCOUNTS, STRATEGIES, TRADES, RISK_RULE
 - `data/` – datasets
 
 ## References
+European Central Bank. (n.d.). *Euro foreign exchange reference rates*. Retrieved November 13, 2026, from https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+
 Malek Mohammadi, M. (2024). *FX_Daracoin_Strategy_Tester* [Data set]. Kaggle. https://www.kaggle.com/datasets/meisammalekmohammadi/fx-daracoin-strategy-tester
+
+[More references to be added from the research logd]
