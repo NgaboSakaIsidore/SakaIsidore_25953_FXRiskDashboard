@@ -55,5 +55,3 @@ CURRENCY_PAIRS, EXCHANGE_RATES, TRADERS, ACCOUNTS, STRATEGIES, TRADES, RISK_RULE
 European Central Bank. (n.d.). *Euro foreign exchange reference rates*. Retrieved November 13, 2026, from https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
 
 Malek Mohammadi, M. (2024). *FX_Daracoin_Strategy_Tester* [Data set]. Kaggle. https://www.kaggle.com/datasets/meisammalekmohammadi/fx-daracoin-strategy-tester
-
-[More references to be added from the research logd]
