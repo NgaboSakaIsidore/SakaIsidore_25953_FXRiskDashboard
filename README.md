@@ -52,6 +52,16 @@ CURRENCY_PAIRS, EXCHANGE_RATES, TRADERS, ACCOUNTS, STRATEGIES, TRADES, RISK_RULE
 - `data/` – datasets
 
 ## References
+Ben-David, I., Birru, J., & Prokopenya, V. (2018). Uninformative feedback and risk taking: Evidence from retail forex trading. *Review of Finance, 22*(6), 2009–2036. https://doi.org/10.1093/rof/rfy022
+
 European Central Bank. (n.d.). *Euro foreign exchange reference rates*. Retrieved November 13, 2026, from https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
 
+European Securities and Markets Authority. (2018, March 27). *Additional information on the agreed product intervention measures relating to contracts for differences and binary options* (ESMA35-43-1000). https://www.consob.it/documents/1912911/1970971/esma35_43_1000.pdf/6dc9bc30-c528-09dc-9430-398c8df4c3af
+
+Heimer, R. Z., & Simsek, A. (2019). Should retail investors' leverage be limited? *Journal of Financial Economics, 132*(3), 1–21. https://doi.org/10.1016/j.jfineco.2018.10.017
+
 Malek Mohammadi, M. (2024). *FX_Daracoin_Strategy_Tester* [Data set]. Kaggle. https://www.kaggle.com/datasets/meisammalekmohammadi/fx-daracoin-strategy-tester
+
+Oracle. (n.d.). PL/SQL triggers. In *Oracle Database PL/SQL language reference* (Release 12.2). Retrieved November 13, 2026, from https://docs.oracle.com/database/122/LNPLS/plsql-triggers.htm
+
+tastyfx. (n.d.). *Trade analytics*. Retrieved November 13, 2026, from https://www.tastyfx.com/learn/risk-management/trade-analytics-tool/
