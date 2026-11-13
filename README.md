@@ -36,13 +36,14 @@ CURRENCY_PAIRS, EXCHANGE_RATES, TRADERS, ACCOUNTS, STRATEGIES, TRADES, RISK_RULE
 - **Functions:** position size from risk percentage, profit/loss from entry and exit price (contract size 100,000), win rate (142 wins out of 331 trades in the loaded data), maximum drawdown
 - **Procedures:** open a trade, close a trade and calculate profit/loss, load and pair entry/exit deals into trades
 - **Cursors:** loop through trades to build a monthly performance report
-- **Triggers:** block a trade whose risk exceeds the per-trade limit (planned 2% of balance) or that pushes the daily loss past the daily limit (planned 3%), and write every blocked attempt to the audit log. Limits are stored in the RISK_RULES table so they can be changed.
+- **Triggers:** block a trade whose risk exceeds the per-trade limit (planned 1.6% of balance; this flags 8 of the 331 historical trades) or that pushes the daily loss past the daily limit (planned 3%; this flags 10 of 217 historical trading days), and write every blocked attempt to the audit log. Limits are stored in the RISK_RULES table so they can be changed.
 - **Package:** group all features in one package (for example FX_TRADING_PKG)
 - **Exception handling:** clear error messages for invalid trades
 
 ## Limitations
 - The trade records are backtest results from one automated strategy and one symbol (EURUSD), not live trades of a human trader.
 - Lot sizes reach 54.79 on an account that started at 50,000, which implies very high leverage, so the data is not a typical retail setup.
+- Risk per trade in the data is very uniform (1.40–1.69% of balance, mean 1.52%), so the 1.6% limit was chosen to flag only a small number of trades; further blocks can be shown with inserted test trades.
 - ECB rates are daily reference rates (one per working day, none on weekends) and are not tradable prices.
 
 ## Repository Structure
